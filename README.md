@@ -1,4 +1,5 @@
 # Flashcard Quiz App
+
 A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS3 concepts. Users can test their knowledge, add/edit/delete flashcards, filter by category, and track their score.
 
 ---
@@ -35,7 +36,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 
 ## File Structure
 
-```
+```plaintext
 flashcard-quiz-app/
 ├── index.html      # Main HTML file
 ├── style.css       # App styling
@@ -49,6 +50,7 @@ flashcard-quiz-app/
 ## Getting Started
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/yourusername/flashcard-quiz-app.git
    cd flashcard-quiz-app
