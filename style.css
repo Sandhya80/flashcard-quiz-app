@@ -1,0 +1,212 @@
+/* General body and container styling */
+body {
+  background: #b8dbec; /* Very light blue */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #263238; /* Dark blue-gray */
+}
+
+.container {
+  max-width: 420px;
+  margin: 2rem auto;
+  background: rgb(223, 228, 217);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(25,118,210,0.08); /* Blue shadow */
+  padding: 2rem 1.5rem;
+}
+
+/* App title */
+h1 {
+  color: #1976d2; /* Blue */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Score display styling */
+.score {
+  text-align: right;
+  font-weight: bold;
+  color: #26c6da; /* Mint */
+}
+
+/* Category filter and shuffle button styling */
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+/* Category filter label */
+.category-filter label,
+.category-filter select {
+  color: #1976d2; /* Blue */
+}
+
+/* Flashcard styling */
+.card {
+  background: linear-gradient(135deg, #95ccec 0%, #bce1f3 100%); /* Violet to very light blue */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08); /* Blue shadow */
+  min-height: 120px;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+  perspective: 600px;
+  border: 2px solid #1976d2; /* Blue border */
+}
+
+/* Front and back of the flashcard */
+.card .front, .card .back {
+  font-size: 1.1rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.card .back {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #26c6da; /* Mint */
+  color: #091d31;     /* Blue */
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+
+/* Flip animation */
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+.card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+/* Multiple choice buttons styling */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.choice-btn {
+  background: #26c6da; /* Mint */
+  color: #263238;      /* Dark blue-gray */
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 80%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.choice-btn:hover {
+  background: #1976d2; /* Blue */
+  color: #fff;
+}
+
+/* Navigation and action buttons */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+button {
+  background: #1976d2; /* Blue */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #26c6da; /* Mint */
+  color: #263238;
+}
+
+/* Reset button special styling */
+.reset {
+  background: rgb(150, 42, 123) ; /* Violet */
+  color: #fff;
+}
+.reset:hover {
+  background: #512da8; /* Darker Violet */
+  color: #fff;
+}
+
+/* Score reset button styling */
+.score-reset-btn {
+  background: #26c6da; /* Mint color */
+  color: #263238;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 0.2s;
+}
+.score-reset-btn:hover {
+  background: #1976d2; /* Blue */
+  color: #fff;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  padding: 0.5rem;
+  border: 1px solid #1976d2; /* Blue border */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+}
+/* Responsive adjustments for medium screens */
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  .card {
+    padding: 1.2rem;
+  }
+}
+/* Responsive adjustments for larger screens */
+@media (min-width: 900px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+}

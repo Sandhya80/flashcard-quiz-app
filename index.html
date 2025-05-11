@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flashcard Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Flashcard Quiz App</h1>
+
+    <!-- Score display -->
+    <div class="score">
+      Score: <span id="score">0</span>
+      <button id="scoreResetBtn" title="Reset Score" class="score-reset-btn">⟳</button>
+    </div>
+
+    <!-- Category filter and shuffle button -->
+    <div class="category-filter">
+      <label for="categorySelect">Category:</label>
+      <select id="categorySelect">
+        <option value="all">All</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3">CSS3</option>
+      </select>
+      <button id="shuffleBtn">Shuffle</button>
+    </div>
+
+    <!-- Flashcard display area -->
+    <div id="flashcard" class="card">
+      <div class="front">Question</div>
+      <div class="back">Answer</div>
+    </div>
+
+    <!-- Multiple choice answer buttons will be inserted here -->
+    <div class="choices" id="choices">
+      <!-- Choices will be dynamically inserted here -->
+    </div>
+
+    <!-- Navigation controls -->
+    <div class="controls">
+      <button id="prevBtn">Previous</button>
+      <button id="flipBtn">Flip</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <!-- Add new flashcard form -->
+    <h2>Add New Flashcard</h2>
+    <form id="cardForm">
+      <input type="text" id="questionInput" placeholder="Question" required>
+      <input type="text" id="answerInput" placeholder="Answer" required>
+      <label for="categoryInput">Category:</label>
+      <select id="categoryInput" required>
+        <option value="">Select Category</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3">CSS3</option>
+      </select>
+      <button type="submit">Add Card</button>
+    </form>
+
+    <!-- Delete, reset, and edit buttons -->
+    <button id="deleteBtn">Delete Current Card</button>
+    <button id="resetBtn" class="reset">Reset All Flashcards</button>
+    <button id="editBtn">Edit Current Card</button>
+
+    <!-- Edit flashcard form (hidden by default) -->
+    <form id="editForm">
+      <input type="text" id="editQuestion" placeholder="Edit Question" required>
+      <input type="text" id="editAnswer" placeholder="Edit Answer" required>
+      <label for="editCategory">Category:</label>
+      <select id="editCategory" required>
+        <option value="">Select Category</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3">CSS3</option>
+      </select>
+      <button type="submit">Save Changes</button>
+      <button type="button" id="cancelEdit">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Main JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
