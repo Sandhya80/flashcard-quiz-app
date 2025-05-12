@@ -106,7 +106,6 @@ function renderCard() {
 }
 
 // Generate three choices (one correct, two random wrong)
-// If the card has an 'options' array, use it; otherwise, generate random options
 function getRandomChoices(correctAnswer, category, cardObj) {
   if (cardObj && Array.isArray(cardObj.options) && cardObj.options.length === 3) {
     // Shuffle the options so the correct answer isn't always first
@@ -147,21 +146,27 @@ function renderChoices() {
 // Handle user selecting a choice
 function handleChoice(selected) {
   const cardObj = filteredCards[current];
-  // Flip the card to show the answer
   card.classList.add('flipped');
   setTimeout(() => {
     if (selected === cardObj.answer) {
-      score++; // Increase score if correct
+      score++;
     } else {
-      score--; // Decrease score if incorrect
+      score--;
     }
     scoreDisplay.textContent = score;
     saveToLocalStorage();
-    // Move to next card after a short delay
     setTimeout(() => {
       card.classList.remove('flipped');
-      current = (current + 1) % filteredCards.length;
-      renderCard();
+      if (current < filteredCards.length - 1) {
+        current++;
+        renderCard();
+      } else {
+        // Show completion message
+        front.textContent = "Quiz complete!";
+        back.textContent = "";
+        document.getElementById('choices').innerHTML = '';
+        // Optionally: console.log('Quiz complete, total cards:', filteredCards.length);
+      }
     }, 1200);
   }, 600);
 }
@@ -169,7 +174,16 @@ function handleChoice(selected) {
 // Filter cards by selected category
 function filterByCategory(category) {
   currentCategory = category;
-  filteredCards = (category === 'all') ? [...flashcards] : flashcards.filter(c => c.category === category);
+  filteredCards = (category === 'all')
+    ? [...flashcards]
+    : flashcards.filter(c => c.category === category);
+  // Shuffle after filtering
+  for (let i = filteredCards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [filteredCards[i], filteredCards[j]] = [filteredCards[j], filteredCards[i]];
+  }
+  //console.log('Filtered cards:', filteredCards.map(c => c.question)); // Added for debugging purpose
+  
   current = 0;
   renderCard();
 }
@@ -251,15 +265,19 @@ document.getElementById('editForm').onsubmit = function(e) {
 // Navigation: next card
 document.getElementById('nextBtn').onclick = function() {
   if (!filteredCards.length) return;
-  current = (current + 1) % filteredCards.length;
-  renderCard();
+  if (current < filteredCards.length - 1) {
+    current++;
+    renderCard();
+  }
 };
 
 // Navigation: previous card
 document.getElementById('prevBtn').onclick = function() {
   if (!filteredCards.length) return;
-  current = (current - 1 + filteredCards.length) % filteredCards.length;
-  renderCard();
+  if (current > 0) {
+    current--;
+    renderCard();
+  }
 };
 
 // Flip the card manually
@@ -286,5 +304,4 @@ document.getElementById('scoreResetBtn').onclick = function() {
 window.onload = function() {
   loadFromLocalStorage();
   filterByCategory('all');
-  renderCard();
 };
