@@ -41,7 +41,11 @@ flashcard-quiz-app/
 ├── index.html      # Main HTML file
 ├── style.css       # App styling
 ├── script.js       # App logic and interactivity
+<<<<<<< HEAD
 ├── favicon.ico     # App icon 
+=======
+├── favicon.ico     # App icon
+>>>>>>> 2aea23854623e733e52abfb402a4b23710c9b7ab
 └── README.md
 ```
 
@@ -65,11 +69,11 @@ _No build steps or dependencies required._
 ## Usage
 
 - **Answer Questions:** Click on the correct answer from the multiple choices.
-- **Flip Card:** Use the "Flip" button to view the answer.
+- **Flip Card:** View the answer using the "Flip" button.
 - **Navigate:** Use "Next" and "Previous" to move between cards.
 - **Add/Edit/Delete:** Use the provided forms and buttons to manage flashcards.
 - **Filter:** Select a category to focus on specific topics.
-- **Shuffle:** Randomize the order of flashcards.
+- **Shuffle:** Randomise the order of flashcards.
 - **Score:** Track your score and reset it anytime.
 
 ---
@@ -77,7 +81,7 @@ _No build steps or dependencies required._
 ## Customization
 
 - **Add More Flashcards:** Edit `script.js` and add more questions/answers to the flashcards array.
-- **Change Styles:** Modify `style.css` for custom colors and layout.
+- **Change Styles:** Modify `style.css` for custom colours and layout.
 - **Expand Categories:** Add new categories and update the category dropdown in `index.html`.
 
 ---
