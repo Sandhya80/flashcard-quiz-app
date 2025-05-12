@@ -1,6 +1,13 @@
 // Initial flashcards for JavaScript, HTML5, and CSS3 categories (no repetitions)
 let flashcards = [
-  // JavaScript Questions
+  // JavaScript category
+  { question: "What is the output of '2 + 2'?", answer: "4", category: "JavaScript" },
+  { question: "What is the output of 'typeof 42'?", answer: "number", category: "JavaScript" },
+  { question: "What is the output of 'typeof 'hello''?", answer: "string", category: "JavaScript" },
+  { question: "What is the output of 'typeof true'?", answer: "boolean", category: "JavaScript" },
+  { question: "What is the output of 'typeof undefined'?", answer: "undefined", category: "JavaScript" },
+  { question: "What is the output of 'typeof {}'?", answer: "object", category: "JavaScript" },
+  { question: "What is the output of 'typeof []'?", answer: "object", category: "JavaScript" },
   { question: "What is the output of 'typeof NaN'?", answer: "number", category: "JavaScript" },
   { question: "What does 'parseInt' do in JavaScript?", answer: "Converts a string to an integer", category: "JavaScript" },
   { question: "What is the purpose of 'JSON.stringify()'?", answer: "Converts a JavaScript object to a JSON string", category: "JavaScript" },
@@ -22,8 +29,74 @@ let flashcards = [
   { question: "How do you write a single-line comment in JavaScript?", answer: "//", category: "JavaScript" },
   { question: "Which array method adds an element to the end of an array?", answer: "push()", category: "JavaScript" },
   { question: "What is the output of typeof null in JavaScript?", answer: "object", category: "JavaScript" },
+  { question: "What is the difference between '==' and '===' in JavaScript?", answer: "'==' compares values with type coercion, '===' compares both value and type", category: "JavaScript" },
+  { question: "How do you check if a variable is an array in JavaScript?", answer: "Array.isArray(variable)", category: "JavaScript" },
+  { question: "What is a promise in JavaScript?", answer: "An object representing the eventual completion or failure of an asynchronous operation", category: "JavaScript" },
+  { question: "What does the 'map()' method do on arrays?", answer: "Creates a new array with the results of calling a function on every element", category: "JavaScript" },
+  { question: "How do you handle exceptions in JavaScript?", answer: "Using try...catch blocks", category: "JavaScript" },
+  { question: "What is the purpose of the 'return' statement in a function?", answer: "Specifies the value to be returned by the function", category: "JavaScript" },
+  { question: "What is the difference between 'null' and 'undefined'?", answer: "'null' is an assigned value, 'undefined' means a variable has not been assigned a value", category: "JavaScript" },
+  { question: "What is an arrow function in JavaScript?", answer: "A shorter syntax for writing functions using '=>'", category: "JavaScript" },
+  { question: "How do you convert a string to a number in JavaScript?", answer: "Using Number(), parseInt(), or parseFloat()", category: "JavaScript" },
+  { question: "What does the 'filter()' method do on arrays?", answer: "Creates a new array with elements that pass a test function", category: "JavaScript" },
+  { question: "What is event bubbling in JavaScript?", answer: "The event propagates from the innermost element to the outer elements", category: "JavaScript" },
+  { question: "How do you prevent the default action of an event?", answer: "By calling event.preventDefault()", category: "JavaScript" },
+  { question: "What is the purpose of the 'setTimeout' function?", answer: "Executes a function after a specified delay", category: "JavaScript" },
+  { question: "What is the difference between 'for...in' and 'for...of' loops?", answer: "'for...in' iterates over object keys, 'for...of' iterates over iterable values", category: "JavaScript" },
+  { question: "How do you merge two arrays in JavaScript?", answer: "Using concat() or the spread operator [...arr1, ...arr2]", category: "JavaScript" },
+  { question: "What is hoisting in JavaScript?", answer: "Variable and function declarations are moved to the top of their scope before code execution", category: "JavaScript" },
+  { question: "How do you define a class in JavaScript?", answer: "Using the 'class' keyword", category: "JavaScript" },
+  { question: "What is the purpose of the 'constructor' method in a class?", answer: "Initializes a newly created object", category: "JavaScript" },
+  { question: "How do you create an object in JavaScript?", answer: "Using object literals {} or the new Object() constructor", category: "JavaScript" },
+  { question: "What does the 'reduce()' method do on arrays?", answer: "Executes a reducer function on each element, resulting in a single output value", category: "JavaScript" },
+  { question: "What is the global object in a browser environment?", answer: "window", category: "JavaScript" },
+  { question: "How do you access the first element of an array?", answer: "array[0]", category: "JavaScript" },
+  { question: "What is the purpose of the 'typeof' operator?", answer: "Returns a string indicating the type of the operand", category: "JavaScript" },
+  { question: "How do you remove the last element from an array?", answer: "Using the pop() method", category: "JavaScript" },
 
-  // HTML5
+  // HTML5 category
+  { question: "What is the purpose of the <section> tag in HTML5?", answer: "Defines a section in a document", category: "HTML5" },
+  { question: "Which HTML5 element is used for navigation links?", answer: "<nav>", category: "HTML5" },
+  { question: "What does the <article> tag represent in HTML5?", answer: "A self-contained composition in a document", category: "HTML5" },
+  { question: "Which tag is used to embed audio content in HTML5?", answer: "<audio>", category: "HTML5" },
+  { question: "Which tag is used to embed video content in HTML5?", answer: "<video>", category: "HTML5" },
+  { question: "What is the purpose of the <aside> tag in HTML5?", answer: "Defines content aside from the main content", category: "HTML5" },
+  { question: "Which HTML5 element is used to mark up footer content?", answer: "<footer>", category: "HTML5" },
+  { question: "What is the purpose of the <header> tag in HTML5?", answer: "Defines a header for a document or section", category: "HTML5" },
+  { question: "Which HTML5 tag is used to mark up a figure or illustration?", answer: "<figure>", category: "HTML5" },
+  { question: "What is the purpose of the <figcaption> tag in HTML5?", answer: "Defines a caption for a <figure> element", category: "HTML5" },
+  { question: "Which HTML5 element is used for marking up time or dates?", answer: "<time>", category: "HTML5" },
+  { question: "What is the purpose of the <mark> tag in HTML5?", answer: "Highlights text", category: "HTML5" },
+  { question: "Which HTML5 tag is used to indicate progress of a task?", answer: "<progress>", category: "HTML5" },
+  { question: "What is the purpose of the <output> tag in HTML5?", answer: "Represents the result of a calculation", category: "HTML5" },
+  { question: "Which HTML5 tag is used for user input suggestions?", answer: "<datalist>", category: "HTML5" },
+  { question: "What is the purpose of the <details> tag in HTML5?", answer: "Specifies additional details that the user can view or hide", category: "HTML5" },
+  { question: "Which HTML5 tag is used to define a visible heading for a <details> element?", answer: "<summary>", category: "HTML5" },
+  { question: "What is the purpose of the <main> tag in HTML5?", answer: "Specifies the main content of a document", category: "HTML5" },
+  { question: "Which HTML5 attribute is used to make an input field take focus automatically?", answer: "autofocus", category: "HTML5" },
+  { question: "Which HTML5 attribute is used to specify that an input field must be filled out before submitting?", answer: "required", category: "HTML5" },
+  { question: "What does HTML stand for?", answer: "HyperText Markup Language", category: "HTML5" },
+  { question: "What is the purpose of the <title> tag in HTML?", answer: "Defines the title of the document", category: "HTML5" },
+  { question: "Which HTML element is used to define a hyperlink?", answer: "<a>", category: "HTML5" },
+  { question: "What is the purpose of the <meta> tag in HTML?", answer: "Provides metadata about the HTML document", category: "HTML5" },
+  { question: "Which tag is used to create a dropdown list in HTML?", answer: "<select>", category: "HTML5" },
+  { question: "What does the <form> tag do in HTML?", answer: "Defines an HTML form for user input", category: "HTML5" },
+  { question: "Which HTML element is used to define a table?", answer: "<table>", category: "HTML5" },
+  { question: "What is the purpose of the <div> tag in HTML?", answer: "Defines a division or section", category: "HTML5" },
+  { question: "Which attribute specifies an alternate text for an image, if the image cannot be displayed?", answer: "alt", category: "HTML5" },
+  { question: "What is the correct HTML element for inserting a line break?", answer: "<br>", category: "HTML5" },
+  { question: "Which HTML element is used to define a heading?", answer: "<h1> to <h6>", category: "HTML5" },
+  { question: "How do you create a list in HTML?", answer: "<ul> or <ol>", category: "HTML5" },
+  { question: "What does the <head> tag contain in an HTML document?", answer: "Metadata about the document", category: "HTML5" },
+  { question: "What is the purpose of the <body> tag in HTML?", answer: "Contains the content of the document", category: "HTML5" },
+  { question: "Which HTML element is used to define a paragraph?", answer: "<p>", category: "HTML5" },
+  { question: "What is the correct HTML element for inserting a line break?", answer: "<br>", category: "HTML5" },
+  { question: "Which HTML element is used to define an unordered list?", answer: "<ul>", category: "HTML5" },
+  { question: "Which HTML element is used to define an ordered list?", answer: "<ol>", category: "HTML5" },
+  { question: "What does the <img> tag do in HTML?", answer: "Displays an image", category: "HTML5" },
+  { question: "What is the purpose of the <a> tag in HTML?", answer: "Defines a hyperlink", category: "HTML5" },
+  { question: "How do you create a table in HTML?", answer: "<table>", category: "HTML5" },
+  { question: "What is the purpose of the <div> tag in HTML?", answer: "Defines a division or section", category: "HTML5" },
   { question: "What does HTML stand for?", answer: "HyperText Markup Language", category: "HTML5" },
   { question: "What is the purpose of the <title> tag in HTML?", answer: "Defines the title of the document", category: "HTML5" },
   { question: "Which HTML element is used to define the document type?", answer: "<!DOCTYPE html>", category: "HTML5" },
@@ -44,7 +117,27 @@ let flashcards = [
   { question: "What is the correct doctype for HTML5?", answer: "<!DOCTYPE html>", category: "HTML5" },
   { question: "Which tag is used to create an unordered list?", answer: "<ul>", category: "HTML5" },
 
-  // CSS3
+  // CSS3 category
+  { question: "Which CSS property controls the space between lines of text?", answer: "line-height", category: "CSS3" },
+  { question: "How do you make a rounded corner in CSS?", answer: "border-radius", category: "CSS3" },
+  { question: "Which property is used to add a shadow to text?", answer: "text-shadow", category: "CSS3" },
+  { question: "How do you create a gradient background in CSS3?", answer: "Using linear-gradient or radial-gradient", category: "CSS3" },
+  { question: "Which property is used to change the opacity of an element?", answer: "opacity", category: "CSS3" },
+  { question: "How do you animate an element in CSS3?", answer: "Using @keyframes and the animation property", category: "CSS3" },
+  { question: "Which CSS property is used to change the spacing between letters?", answer: "letter-spacing", category: "CSS3" },
+  { question: "What does the 'box-sizing' property do?", answer: "Defines how the total width and height of an element is calculated", category: "CSS3" },
+  { question: "How do you make an element float to the right in CSS?", answer: "float: right;", category: "CSS3" },
+  { question: "Which property is used to set the stacking order of elements?", answer: "z-index", category: "CSS3" },
+  { question: "How do you hide an element but keep its space in the layout?", answer: "visibility: hidden;", category: "CSS3" },
+  { question: "Which property is used to add a shadow to a box?", answer: "box-shadow", category: "CSS3" },
+  { question: "How do you make a list display horizontally in CSS?", answer: "Using display: flex or display: inline", category: "CSS3" },
+  { question: "Which property is used to control the size of the background image?", answer: "background-size", category: "CSS3" },
+  { question: "How do you select only the first child element in CSS?", answer: ":first-child", category: "CSS3" },
+  { question: "Which property is used to set the maximum width of an element?", answer: "max-width", category: "CSS3" },
+  { question: "How do you apply a style only when hovering over an element?", answer: ":hover pseudo-class", category: "CSS3" },
+  { question: "Which CSS property is used to control the order of flex items?", answer: "order", category: "CSS3" },
+  { question: "How do you make an element stick to the top of the page when scrolling?", answer: "position: sticky; top: 0;", category: "CSS3" },
+  { question: "Which property is used to control the transition effect between two states?", answer: "transition", category: "CSS3" },
   { question: "What does CSS stand for?", answer: "Cascading Style Sheets", category: "CSS3" },
   { question: "How do you apply a CSS style to an HTML element?", answer: "Using a selector", category: "CSS3" },
   { question: "What is the correct CSS syntax to change the font size?", answer: "font-size: 16px;", category: "CSS3" },
@@ -61,7 +154,27 @@ let flashcards = [
   { question: "Which property is used to change the font size?", answer: "font-size", category: "CSS3" },
   { question: "What does the 'display: flex' property do?", answer: "Enables flexbox layout", category: "CSS3" },
   { question: "How do you select all <p> elements inside a <div> in CSS?", answer: "div p", category: "CSS3" },
-  { question: "Which property adds space inside an element's border?", answer: "padding", category: "CSS3" }
+  { question: "Which property adds space inside an element's border?", answer: "padding", category: "CSS3" },
+  { question: "Which CSS property is used to control the spacing between words?", answer: "word-spacing", category: "CSS3" },
+  { question: "How do you make an element fully transparent in CSS?", answer: "opacity: 0;", category: "CSS3" },
+  { question: "Which property is used to set the minimum height of an element?", answer: "min-height", category: "CSS3" },
+  { question: "How do you create a circle using CSS?", answer: "border-radius: 50%;", category: "CSS3" },
+  { question: "Which property is used to specify the style of the list item marker?", answer: "list-style-type", category: "CSS3" },
+  { question: "How do you make a background image repeat only horizontally?", answer: "background-repeat: repeat-x;", category: "CSS3" },
+  { question: "Which CSS property is used to specify the space between the border and the content?", answer: "padding", category: "CSS3" },
+  { question: "How do you make an element fixed at the bottom of the page?", answer: "position: fixed; bottom: 0;", category: "CSS3" },
+  { question: "Which property is used to specify the transparency of an element's background?", answer: "background-color: rgba()", category: "CSS3" },
+  { question: "How do you select every even row in a table using CSS?", answer: "tr:nth-child(even)", category: "CSS3" },
+  { question: "Which property is used to control the direction of text?", answer: "direction", category: "CSS3" },
+  { question: "How do you make an element invisible and remove it from the layout?", answer: "display: none;", category: "CSS3" },
+  { question: "Which CSS property is used to add rounded corners to an element?", answer: "border-radius", category: "CSS3" },
+  { question: "How do you apply multiple classes to a single HTML element in CSS?", answer: "Separate class names with spaces in the class attribute", category: "CSS3" },
+  { question: "Which property is used to set the distance between the borders of adjacent cells?", answer: "border-spacing", category: "CSS3" },
+  { question: "How do you make a background image cover the entire element?", answer: "background-size: cover;", category: "CSS3" },
+  { question: "Which CSS property is used to specify the style of the cursor?", answer: "cursor", category: "CSS3" },
+  { question: "How do you apply a style to all elements of a specific type?", answer: "Use the element selector (e.g., p { ... })", category: "CSS3" },
+  { question: "Which property is used to align items along the main axis in flexbox?", answer: "justify-content", category: "CSS3" },
+  { question: "How do you set a background image to not repeat?", answer: "background-repeat: no-repeat;", category: "CSS3" }
 ];
 
 let score = 0; // User's score
@@ -95,14 +208,16 @@ function renderCard() {
   if (!filteredCards.length) {
     front.textContent = "No cards!";
     back.textContent = "";
-    document.getElementById('choices').innerHTML = '';
+    document.getElementById('choices').innerHTML = ''; // Clear choices
     return;
   }
-  const cardObj = filteredCards[current];
+  const cardObj = filteredCards[current]; // Get the current card object
+  // Set the front and back text
   front.textContent = cardObj.question;
   back.textContent = cardObj.answer;
-  scoreDisplay.textContent = score;
-  renderChoices();
+  scoreDisplay.textContent = score; // Update score display
+  // Clear previous choices
+  renderChoices(); 
 }
 
 // Generate three choices (one correct, two random wrong)
@@ -128,12 +243,15 @@ function getRandomChoices(correctAnswer, category, cardObj) {
 
 // Render the multiple choice buttons
 function renderChoices() {
-  const choicesDiv = document.getElementById('choices');
+  const choicesDiv = document.getElementById('choices'); // Get the choices div
+  // Clear previous choices
   choicesDiv.innerHTML = '';
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) return; // No cards to show
+  // Get the current card object
   const cardObj = filteredCards[current];
   // Pass the card object to getRandomChoices for possible predefined options
   const choices = getRandomChoices(cardObj.answer, cardObj.category, cardObj);
+  // Create buttons for each choice
   choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.className = 'choice-btn';
@@ -145,7 +263,8 @@ function renderChoices() {
 
 // Handle user selecting a choice
 function handleChoice(selected) {
-  const cardObj = filteredCards[current];
+  const cardObj = filteredCards[current];// Get the current card object
+  // Check if the selected answer is correct
   card.classList.add('flipped');
   setTimeout(() => {
     if (selected === cardObj.answer) {
@@ -153,10 +272,12 @@ function handleChoice(selected) {
     } else {
       score--;
     }
-    scoreDisplay.textContent = score;
+    scoreDisplay.textContent = score; // Update score display
+    // Save the score to localStorage
     saveToLocalStorage();
     setTimeout(() => {
-      card.classList.remove('flipped');
+      card.classList.remove('flipped'); // Flip back the card
+      // Check if there are more cards to show
       if (current < filteredCards.length - 1) {
         current++;
         renderCard();
@@ -165,10 +286,10 @@ function handleChoice(selected) {
         front.textContent = "Quiz complete!";
         back.textContent = "";
         document.getElementById('choices').innerHTML = '';
-        // Optionally: console.log('Quiz complete, total cards:', filteredCards.length);
+        // console.log('Quiz complete, total cards:', filteredCards.length); (// Added for debugging purpose)        
       }
-    }, 1200);
-  }, 600);
+    }, 1200); // 1.2s delay before flipping back
+  }, 600); // 0.6s delay before checking the answer
 }
 
 // Filter cards by selected category
@@ -179,11 +300,11 @@ function filterByCategory(category) {
     : flashcards.filter(c => c.category === category);
   // Shuffle after filtering
   for (let i = filteredCards.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random() * (i + 1)); // Shuffle the filtered cards
     [filteredCards[i], filteredCards[j]] = [filteredCards[j], filteredCards[i]];
   }
   //console.log('Filtered cards:', filteredCards.map(c => c.question)); // Added for debugging purpose
-  
+
   current = 0;
   renderCard();
 }
@@ -201,24 +322,25 @@ function shuffleCards() {
 // Add new flashcard
 document.getElementById('cardForm').onsubmit = function(e) {
   e.preventDefault();
-  const q = document.getElementById('questionInput').value.trim();
-  const a = document.getElementById('answerInput').value.trim();
-  const c = document.getElementById('categoryInput').value;
+  const q = document.getElementById('questionInput').value.trim(); // Get the question input
+  const a = document.getElementById('answerInput').value.trim(); // Get the answer input
+  const c = document.getElementById('categoryInput').value; // Get the category input
+  // Check if the question, answer, and category are valid
   if (q && a && c) {
     flashcards.push({ question: q, answer: a, category: c });
     saveToLocalStorage();
-    filterByCategory(currentCategory);
-    this.reset();
+    filterByCategory(currentCategory); // Refresh the filtered cards
+    this.reset(); // Reset the form
   }
 };
 
 // Delete the current flashcard
 document.getElementById('deleteBtn').onclick = function() {
-  if (!filteredCards.length) return;
-  const idx = flashcards.findIndex(c => c === filteredCards[current]);
-  if (idx > -1) flashcards.splice(idx, 1);
-  saveToLocalStorage();
-  filterByCategory(currentCategory);
+  if (!filteredCards.length) return; // No cards to delete
+  const idx = flashcards.findIndex(c => c === filteredCards[current]); // Find the index of the current card
+  if (idx > -1) flashcards.splice(idx, 1); // Remove the card from flashcards
+  saveToLocalStorage(); // Save to localStorage
+  filterByCategory(currentCategory); // Refresh the filtered cards  
 };
 
 // Reset all flashcards and score
@@ -227,15 +349,17 @@ document.getElementById('resetBtn').onclick = function() {
     flashcards = [];
     score = 0;
     saveToLocalStorage();
-    filterByCategory('all');
+    filterByCategory('all'); // Refresh the filtered cards
   }
 };
 
 // Edit the current flashcard
 document.getElementById('editBtn').onclick = function() {
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) return; // No cards to edit
+  // Show the edit form
   document.getElementById('editForm').style.display = 'flex';
-  const cardObj = filteredCards[current];
+  const cardObj = filteredCards[current]; // Get the current card object
+  // Set the values in the edit form
   document.getElementById('editQuestion').value = cardObj.question;
   document.getElementById('editAnswer').value = cardObj.answer;
   document.getElementById('editCategory').value = cardObj.category;
@@ -243,28 +367,33 @@ document.getElementById('editBtn').onclick = function() {
 
 // Cancel editing
 document.getElementById('cancelEdit').onclick = function() {
-  document.getElementById('editForm').style.display = 'none';
+  document.getElementById('editForm').style.display = 'none'; // Hide the edit form
 };
 
 // Save changes to the edited flashcard
 document.getElementById('editForm').onsubmit = function(e) {
-  e.preventDefault();
+  e.preventDefault(); // Prevent form submission
+  // Get the values from the edit form
   const q = document.getElementById('editQuestion').value.trim();
   const a = document.getElementById('editAnswer').value.trim();
   const c = document.getElementById('editCategory').value;
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) return; // No cards to edit
+  // Check if the question, answer, and category are valid
   const idx = flashcards.findIndex(ca => ca === filteredCards[current]);
   if (idx > -1) {
     flashcards[idx] = { question: q, answer: a, category: c };
     saveToLocalStorage();
-    filterByCategory(currentCategory);
-    document.getElementById('editForm').style.display = 'none';
+    filterByCategory(currentCategory); // Refresh the filtered cards
+    document.getElementById('editForm').style.display = 'none'; // Hide the edit form
   }
 };
 
 // Navigation: next card
 document.getElementById('nextBtn').onclick = function() {
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) return; // No cards to navigate
+  // Check if there are more cards to show
+  // It makes sure that the current index doesn't go beyond the last card and the card is not flipped
+  // If the card is flipped, it will not navigate to the next card
   if (current < filteredCards.length - 1) {
     current++;
     renderCard();
@@ -273,7 +402,9 @@ document.getElementById('nextBtn').onclick = function() {
 
 // Navigation: previous card
 document.getElementById('prevBtn').onclick = function() {
-  if (!filteredCards.length) return;
+  if (!filteredCards.length) return; // No cards to navigate
+  // Check if there are previous cards to show
+  // It makes sure that the current index doesn't go below 0 and the card is not flipped
   if (current > 0) {
     current--;
     renderCard();
@@ -282,12 +413,12 @@ document.getElementById('prevBtn').onclick = function() {
 
 // Flip the card manually
 document.getElementById('flipBtn').onclick = function() {
-  card.classList.toggle('flipped');
+  card.classList.toggle('flipped'); // Toggle the flipped class
 };
 
 // Category filter change
 categorySelect.onchange = function() {
-  filterByCategory(this.value);
+  filterByCategory(this.value); // Filter cards by selected category
 };
 
 // Shuffle button click
@@ -296,12 +427,14 @@ document.getElementById('shuffleBtn').onclick = shuffleCards;
 // Score reset button functionality
 document.getElementById('scoreResetBtn').onclick = function() {
   score = 0;
-  scoreDisplay.textContent = score;
+  scoreDisplay.textContent = score; // Update score display
+  // Save the score to localStorage
   saveToLocalStorage();
 };
 
 // On page load: load data and render first card
 window.onload = function() {
-  loadFromLocalStorage();
+  loadFromLocalStorage(); // Load flashcards and score from localStorage
+  // Populate the category select options
   filterByCategory('all');
 };
