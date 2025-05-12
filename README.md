@@ -41,7 +41,7 @@ flashcard-quiz-app/
 ├── index.html      # Main HTML file
 ├── style.css       # App styling
 ├── script.js       # App logic and interactivity
-├── favicon.ico     # App icon (optional)
+├── favicon.ico     # App icon 
 └── README.md
 ```
 
