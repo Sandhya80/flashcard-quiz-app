@@ -38,7 +38,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 ## Deployed App
 
 You can try the Flashcard Quiz App live here:  
-[https://github.com/Sandhya80/flashcard-quiz-app.git](https://yourusername.github.io/flashcard-quiz-app/)
+[https://sandhya80.github.io/flashcard-quiz-app/](https://yourusername.github.io/flashcard-quiz-app/)
 
 ---
 
