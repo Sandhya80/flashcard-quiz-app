@@ -40,8 +40,6 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 You can try the Flashcard Quiz App live here:  
 [https://github.com/Sandhya80/flashcard-quiz-app.git](https://yourusername.github.io/flashcard-quiz-app/)
 
-*(Replace `yourusername` with your actual GitHub username if needed.)*
-
 ---
 
 ## File Structure
