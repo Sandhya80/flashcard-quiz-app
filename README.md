@@ -13,6 +13,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Customization](#customization)
+- [JavaScript Methodologies Used](#javascript-methodologies-used)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -87,6 +88,39 @@ _No build steps or dependencies required._
 - **Add More Flashcards:** Edit `script.js` and add more questions/answers to the flashcards array.
 - **Change Styles:** Modify `style.css` for custom colours and layout.
 - **Expand Categories:** Add new categories and update the category dropdown in `index.html`.
+
+---
+
+## JavaScript Methodologies Used
+
+The Flashcard Quiz App leverages modern JavaScript methodologies and best practices to ensure a robust, maintainable, and interactive user experience:
+
+- **Modular Code Structure:**  
+  Functions are organized by responsibility (rendering, event handling, data management) for clarity and maintainability.
+
+- **DOM Manipulation:**  
+  The app dynamically updates the DOM to display questions, choices, scores, and feedback using methods like `document.getElementById`, `createElement`, and event listeners.
+
+- **Event-Driven Programming:**  
+  User interactions (button clicks, form submissions, category changes) are handled using event listeners to provide real-time feedback and interactivity.
+
+- **State Management:**  
+  The app maintains state variables (such as current question, score, filtered cards, and selected category) to track user progress and update the UI accordingly.
+
+- **Local Storage:**  
+  User data (flashcards and score) is persisted using `localStorage`, allowing users to retain their progress and custom cards across sessions.
+
+- **Array Methods:**  
+  Modern array methods like `.filter()`, `.map()`, `.forEach()`, and `.sort()` are used for efficient data manipulation (e.g., filtering by category, shuffling cards, generating choices).
+
+- **Form Handling and Validation:**  
+  Input forms for adding and editing flashcards include validation to ensure data integrity before updating the flashcard set.
+
+- **Responsive Feedback:**  
+  The UI provides immediate feedback for correct/incorrect answers, quiz completion, and score updates.
+
+- **Progressive Enhancement:**  
+  The app is designed to work seamlessly on all modern browsers and devices, with graceful fallbacks for unsupported features.
 
 ---
 
