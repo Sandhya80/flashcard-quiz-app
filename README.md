@@ -8,6 +8,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 
 - [Features](#features)
 - [Demo](#demo)
+- [Deployed App](#deployed-app)
 - [File Structure](#file-structure)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
@@ -34,19 +35,24 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 
 ---
 
+## Deployed App
+
+You can try the Flashcard Quiz App live here:  
+[https://github.com/Sandhya80/flashcard-quiz-app.git](https://yourusername.github.io/flashcard-quiz-app/)
+
+*(Replace `yourusername` with your actual GitHub username if needed.)*
+
+---
+
 ## File Structure
 
 ```plaintext
 flashcard-quiz-app/
-├── index.html      # Main HTML file
-├── style.css       # App styling
-├── script.js       # App logic and interactivity
-<<<<<<< HEAD
-├── favicon.ico     # App icon 
-=======
-├── favicon.ico     # App icon
->>>>>>> 2aea23854623e733e52abfb402a4b23710c9b7ab
-└── README.md
+├── [index.html](http://_vscodecontentref_/0)      # Main HTML file
+├── [style.css](http://_vscodecontentref_/1)       # App styling
+├── [script.js](http://_vscodecontentref_/2)       # App logic and interactivity
+├── [favicon.ico](http://_vscodecontentref_/3)     # App icon 
+└── [README.md](http://_vscodecontentref_/4)
 ```
 
 ---
