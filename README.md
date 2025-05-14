@@ -6,12 +6,12 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 
 ## Table of Contents
 
-- [Features](#features)
+- [Key Features](#key-features)
 - [Demo](#demo)
 - [Deployed App](#deployed-app)
 - [File Structure](#file-structure)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
+- [User Instructions](#user-instructions)
 - [Customization](#customization)
 - [JavaScript Methodologies Used](#javascript-methodologies-used)
 - [Toggle Feature (Dark Mode / Light Mode)](#toggle-feature-dark-mode--light-mode)
@@ -20,7 +20,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 
 ---
 
-## Features
+## Key Features
 
 - Multiple-choice flashcards for JavaScript, HTML5, and CSS3
 - Add, edit, and delete flashcards
@@ -73,7 +73,7 @@ _No build steps or dependencies required._
 
 ---
 
-## Usage
+## User Instructions
 
 - **Answer Questions:** Click on the correct answer from the multiple choices.
 - **Flip Card:** View the answer using the "Flip" button.
