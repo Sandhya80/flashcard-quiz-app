@@ -432,6 +432,26 @@ document.getElementById('scoreResetBtn').onclick = function() {
   saveToLocalStorage();
 };
 
+// Dark Mode/Light Mode Toggle Feature
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Check localStorage for theme preference
+if (localStorage.getItem('theme') === 'dark' || 
+    (!localStorage.getItem('theme') && prefersDark)) {
+  document.body.classList.add('dark-mode');
+  if (themeToggleBtn) themeToggleBtn.textContent = '☀️ Light Mode';
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    themeToggleBtn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+}
+
 // On page load: load data and render first card
 window.onload = function() {
   loadFromLocalStorage(); // Load flashcards and score from localStorage
