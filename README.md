@@ -137,7 +137,7 @@ The Flashcard Quiz App includes a convenient Dark Mode/Light Mode toggle. Users 
 You can see the Dark Mode/Light Mode toggle in action below:
 
 <!-- Need to replace the link below with a GIF or video demonstrating the toggle feature -->
-![Dark Mode Toggle Demo](./dark-mode-toggle-demo.gif)
+![Dark Mode Toggle Demo](togglebtn.gif)
 
 ---
 
