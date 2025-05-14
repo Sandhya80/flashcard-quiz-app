@@ -10,9 +10,16 @@
 <body>
   <div class="container">
     <h1>Flashcard Quiz App</h1>
+    <!-- Theme toggle button -->
+    <!-- Wrap the toggle button in a div for centering -->
+    <div class="toggle-center">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle dark mode">
+        🌙 Dark Mode
+      </button>
+    </div>
 
     <!-- Score display -->
-    <div class="score">
+    <div class="score" aria-live="polite"> <!-- Live region for score updates -->
       Score: <span id="score">0</span>
       <button id="scoreResetBtn" title="Reset Score" class="score-reset-btn">⟳</button>
     </div>
