@@ -27,7 +27,7 @@ h1 {
 .score {
   text-align: right;
   font-weight: bold;
-  color: #26c6da; /* Mint */
+  color: #2a5d64; /* Mint */
 }
 
 /* Category filter and shuffle button styling */
@@ -184,31 +184,75 @@ input, select {
   font-size: 1rem;
 }
 
-/* Responsive adjustments */
-/* Adjustments for smaller screens */
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem 0.5rem;
-  }
-  .card {
-    padding: 1rem;
-  }
+/* Theme toggle button */
+.theme-toggle-btn {
+  margin: 1rem 0;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  background: #eee;
+  color: #222;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
-/* Responsive adjustments for medium screens */
-@media (min-width: 600px) and (max-width: 900px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
-  .card {
-    padding: 1.2rem;
-  }
+.theme-toggle-btn:focus {
+  outline: 2px solid #007bff;
 }
-/* Responsive adjustments for larger screens */
-@media (min-width: 900px) {
-  .container {
-    padding: 2rem 1.5rem;
-  }
-  .card {
-    padding: 1.5rem;
-  }
+
+/* Center the toggle button horizontally */
+.toggle-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #181a1b;
+  color: #f1f1f1;
+}
+body.dark-mode .container,
+body.dark-mode .card,
+body.dark-mode .score,
+body.dark-mode .category-filter,
+body.dark-mode .choices,
+body.dark-mode .controls {
+  background: #23272b !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #110e0e !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7) !important;
+}
+body.dark-mode .container {
+  background: #3d4550 !important;
+}
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #28292b;
+  color: #e6e2e2;
+  border-color: #221a1a;
+}
+body.dark-mode .card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+body.dark-mode .theme-toggle-btn {
+  background: #235e99;
+  color: #ffb300;
+}
+body.dark-mode .front,
+body.dark-mode .back {
+  background: #23272b !important;
+  color: #f1f1f1 !important;
+}
+body.dark-mode button,
+body.dark-mode .score-reset-btn {
+  background: #23272b !important;
+  color: #ffb300 !important;
+  border-color: #444 !important;
+}
+body.dark-mode button:disabled {
+  background: #444 !important;
+  color: #888 !important;
 }
