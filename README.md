@@ -1,6 +1,6 @@
 # Flashcard Quiz App
 
-A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS3 concepts. Users can test their knowledge, add/edit/delete flashcards, filter by category, and track their score.
+A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS3 concepts. Users can test their knowledge, add/edit/delete flashcards, filter by category, track their score, and switch between Dark Mode and Light Mode for comfortable studying at any time.
 
 ---
 
@@ -14,6 +14,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 - [Usage](#usage)
 - [Customization](#customization)
 - [JavaScript Methodologies Used](#javascript-methodologies-used)
+- [Toggle Feature (Dark Mode / Light Mode)](#toggle-feature-dark-mode--light-mode)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -27,6 +28,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 - Score tracking with reset option
 - Responsive and modern UI
 - Data persistence with localStorage
+- **Dark Mode / Light Mode toggle for comfortable viewing**
 
 ---
 
@@ -39,7 +41,7 @@ A simple, interactive flashcard quiz app for learning JavaScript, HTML5, and CSS
 ## Deployed App
 
 You can try the Flashcard Quiz App live here:  
-[https://sandhya80.github.io/flashcard-quiz-app/](https://yourusername.github.io/flashcard-quiz-app/)
+[https://sandhya80.github.io/flashcard-quiz-app/](https://sandhya80.github.io/flashcard-quiz-app/)
 
 ---
 
@@ -121,6 +123,21 @@ The Flashcard Quiz App leverages modern JavaScript methodologies and best practi
 
 - **Progressive Enhancement:**  
   The app is designed to work seamlessly on all modern browsers and devices, with graceful fallbacks for unsupported features.
+
+---
+
+## Toggle Feature (Dark Mode / Light Mode)
+
+The Flashcard Quiz App includes a convenient Dark Mode/Light Mode toggle. Users can switch between dark and light themes at any time using the toggle button at the top of the app. The app remembers your preference for future visits, providing a comfortable experience whether you're studying during the day or at night.
+
+---
+
+### Demo of Toggle Feature
+
+You can see the Dark Mode/Light Mode toggle in action below:
+
+<!-- Need to replace the link below with a GIF or video demonstrating the toggle feature -->
+![Dark Mode Toggle Demo](./dark-mode-toggle-demo.gif)
 
 ---
 
